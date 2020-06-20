@@ -1,0 +1,7 @@
+<p>cache works!</p>
+<div *ngFor="let repo of repos$ |async">
+    <h2>{{repo.name}}</h2>
+    <div>
+        {{repo.description | json}}
+    </div>
+</div>
