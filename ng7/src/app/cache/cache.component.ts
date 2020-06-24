@@ -53,8 +53,6 @@ export class CacheComponent implements OnInit {
     console.log(myFormInput)
     console.log(myFormInput.otherInfo)
     this.myForm = this.formBuilderService.buildForm(myFormInput);
-    //this.myForm = this.formBuilder.group({})
-    debugger
     console.log(this.myForm)
   }
 
