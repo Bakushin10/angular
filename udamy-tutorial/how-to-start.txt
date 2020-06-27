@@ -1,0 +1,28 @@
+npm start : starts front
+npm run server : start server
+
+store structure:
+
+parent : app.module.ts 
+
+app.module.ts is the root of the StoreModule.forRoot(...)
+it imports StoreModule and childModule 
+
+in app.module.ts
+
+imports:[
+    ...
+    AuthModule.forRoot(),
+    StoreModule.forRoot(reducers, { metaReducers }),
+]
+
+
+in auth.module.ts
+
+imports:[
+        ...
+        RouterModule.forChild([{path: '', component: LoginComponent}]),
+        StoreModule.forFeature('auth',authReducer),
+]
+
+'auth' is the name of the child state for auth.module.ts
