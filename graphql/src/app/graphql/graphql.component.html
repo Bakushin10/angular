@@ -1,0 +1,13 @@
+<p>graphql works!</p>
+
+<h2>Create Quote</h2>
+title: <input #title type="text" />
+body: <input #body type="text" />
+<button (click)="create(title.value, body.value)">Submit</button>
+<h1>Quotes</h1>
+<ul>
+  <li *ngFor="let snippet of snippets | async">
+    "{{ snippet.quote }}", {{ snippet.author }}
+    <button (click)="delete(snippet._id)">Delete</button>
+  </li>
+</ul>
